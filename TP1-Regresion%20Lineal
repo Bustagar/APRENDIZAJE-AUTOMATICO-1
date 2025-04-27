@@ -1,0 +1,400 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Bustagar/APRENDIZAJE-AUTOMATICO-1/blob/main/TP1-Regresion%2520Lineal\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# TP1 AA1\n",
+        "\n",
+        "Juan Sebastian Bustamante Garcia"
+      ],
+      "metadata": {
+        "id": "t4CxvZXx6Dmy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Indicaciones básicas\n",
+        "\n",
+        "0) Debe usar este notebook como template para su entrega. Haga una copia y comience a completar las consignas.\n",
+        "\n",
+        "1) Cada uno debe completar las consignas indicadas en este notebook.\n",
+        "\n",
+        "2)\n",
+        "3) No pueden repetir el mismo dataset que ya haya definido un compañero.\n",
+        "\n",
+        "4) copias explícitas de secciones enteras del trabajo de otro será penalizado disminuyendo su puntuación.\n",
+        "\n",
+        "5) No se olvide de añadir las fuentes de inspiración de su código (blogs, prompts de chatgpt o similar).\n",
+        "\n",
+        "6) Además de todo el código que agregue, es importante que sepa interpretarlo. Agregue texto explicativo en cada sección. Esto le ayudará al momento del coloquio / parcial\n",
+        "\n",
+        "7) Revise las fecha límite de entrega de este trabajo"
+      ],
+      "metadata": {
+        "id": "BSeucmV-KLmJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ENTREGA"
+      ],
+      "metadata": {
+        "id": "0qigDO5T90h-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "* En el foro destinado a la tarea debe postear al menos tres veces:\n",
+        "  - La primera vez para indicar el dataset elegido\n",
+        "  - Una segunda vez para postear su entrega\n",
+        "  - Una tercera vez para brindar feedback a alguien más en el foro.\n",
+        "  - Puede comentar más de un posteo de sus compañeros siempre y cuando el intercambio sea respetuoso y fructífero.\n",
+        "* Deben postear como solución un enlace a su notebook colab público y también un enlace al mismo notebook alojado en su repositorio GitHub.\n",
+        "* Debe sumar el enlace a un video donde muestre su solución y explique lo realizado. Duración máxima: 5 minutos. Puede grabarse a Ud. mismo usando una sesión de zoom y grabar localmente. Puede subir el video a su youtube personal como privado o Unlisted.\n",
+        "* Enlaces no accesibles o enlaces erróneos es igual a determinar que la tarea no ha sido entregada. Corrobore la viabilidad de los enlaces que postea.\n"
+      ],
+      "metadata": {
+        "id": "N4Uno_w694De"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#**Tarea: Aplicación de Regresión Lineal y Análisis de Importancia de Variables**  \n",
+        "**Objetivo**: Aplicar un modelo de regresión lineal a un dataset de su elección, evaluar su rendimiento e identificar las variables más relevantes para la predicción.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "# **Instrucciones**:\n",
+        "\n",
+        "#1. **Selección del Dataset**  \n",
+        "   - Elijan un dataset de UCI ML Repository del siguiente enlace: https://archive.ics.uci.edu/datasets/?Task=Regression&skip=0&take=10&sort=desc&orderBy=NumHits&search=  \n",
+        "   - Requisitos:  \n",
+        "     - Debe tener al menos 4 variables numéricas continuas (1 target, 3 o más features).  \n",
+        "     - Idealmente, que las features tengan distintas escalas o unidades ( no excluyente).\n",
+        "     - Revisar en el foro de la tarea que dicho dataset no haya sido ya elegido por otra persona.\n",
+        "     - Postee en el foro de la tarea el dataset que eligió. Continue al siguiente punto.  \n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "7WAej0Lx6D91"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Resolución:"
+      ],
+      "metadata": {
+        "id": "rTJxJxW28FMc"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Dataset utilizado es \"Wine Quality\" sacado del siguiente link: https://archive.ics.uci.edu/dataset/186/wine+quality"
+      ],
+      "metadata": {
+        "id": "bMXWrSmg8wFo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns"
+      ],
+      "metadata": {
+        "id": "gq7zciB78FvY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "bOMuFL5K8qV-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "## 2. **Análisis exploratorio (previo al modelado)**  \n",
+        "   - Describan las variables (media, distribución, outliers).  \n",
+        "   - Visualizen:  \n",
+        "     - Histogramas o boxplots para ver distribuciones.  \n",
+        "     - Gráficos de dispersión (scatterplots) entre features y target.  \n",
+        "   - **Pregunta clave**: ¿Qué relaciones lineales preliminares observan?  \n"
+      ],
+      "metadata": {
+        "id": "UWnCaDQP7bbO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "lGBS5lxg8LqR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Resolución:"
+      ],
+      "metadata": {
+        "id": "j5j6RRR4_UHg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "vZBsHZRO_UHh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "9xMXweis_UHh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "4kP9F8YX8LEe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. **Preprocesamiento**  \n",
+        "   - Limpieza: Manejen missing values (eliminar, imputar) y outliers (si es necesario).  \n",
+        "   - Limpieza: indique cuáles features descarta. Justifique.\n",
+        "   - Indique si usará o no variables categóricas. Justifique. Realice su preprocesamiento adeucado.\n",
+        "   - Escalen las features (p.ej., StandardScaler) para comparar coeficientes después.  \n",
+        "   - Dividan en train/test (70-30 o 80-20).  "
+      ],
+      "metadata": {
+        "id": "A1Ajkh2O70cd"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "y7sVuQOm76ix"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Resolución:"
+      ],
+      "metadata": {
+        "id": "28o4EfDd_WQg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "a7qdTaxy_WQg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "On_Ef-tt_WQi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "qYg_F-1e_Vro"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "9KJo1rKe768q"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "## 4. **Regresión Lineal**  \n",
+        "   - Ajusten un modelo de regresión lineal (usando `sklearn.linear_model.LinearRegression`).  \n",
+        "   - Obtengan:  \n",
+        "     - Coeficientes (pesos) del modelo.  \n",
+        "     - Evaluar métricas en el set de entrenamiento y en el de testeo: **R²**, MSE (error cuadrático medio), MAE.  \n"
+      ],
+      "metadata": {
+        "id": "8z3BaKBi70w2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "qRyxmspU9YMo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "## 5. **Importancia de Variables**  \n",
+        "   - Analicen los **coeficientes** del modelo:  \n",
+        "     - Valores absolutos altos → mayor impacto en el target.  \n",
+        "     - Signo: Relación positiva/negativa con el target.  \n",
+        "   - Comparen la magnitud de los coeficientes **escalados** (si usaron features en distintas unidades).  \n",
+        "   - **5.1. Opcional**:\n",
+        "     Otra forma es \"desordenar\" un feature y ver cómo empeora el modelo. Si al desordenarlo el error aumenta mucho, ese feature era importante. Usen métodos como:  \n",
+        "     - **Permutation Importance** (de sklearn) para validar importancia. Más info en https://scikit-learn.org/stable/modules/permutation_importance.html\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "YpBHmWkt9Yqm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Resolución:"
+      ],
+      "metadata": {
+        "id": "h6IvyHmV9ccg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "GNX2zdbS9cch"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Xk7E48UV9Y6t"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "## 6. **Reflexión**  \n",
+        "   - ¿Cuáles variables son más importantes según el modelo? ¿Coincide con su análisis exploratorio?  \n",
+        "   - ¿El modelo tiene buen rendimiento (R² alto, MSE bajo)? Si no, ¿a qué podría deberse?  \n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "W1TnsxX69h3C"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Resolución:"
+      ],
+      "metadata": {
+        "id": "o-4LI7_h9Z4Q"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "4ZvMj3P89Z4R"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "## **Bonus**:  \n",
+        "- Prueben eliminar variables \"poco importantes\" y reentrenar el modelo. ¿Mejora el rendimiento?  "
+      ],
+      "metadata": {
+        "id": "cM2tFQD39LsU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "l8R1sNrp9QyC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "---\n",
+        "\n",
+        "### **Tips**:  \n",
+        "- Si el R² es muy bajo, revisen si hay relaciones no lineales (y consideren transformar features).  \n",
+        "- Documenten cada paso: ¡la trazabilidad es clave en ciencia de datos!  \n"
+      ],
+      "metadata": {
+        "id": "_kTXcnnw9vQB"
+      }
+    }
+  ]
+}
